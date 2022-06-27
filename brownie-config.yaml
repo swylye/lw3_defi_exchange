@@ -1,0 +1,24 @@
+dependencies:
+  # - <organization/repo>@<version>
+  - OpenZeppelin/openzeppelin-contracts@4.6.0
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.6.0'
+dotenv: .env
+networks:
+  default: development
+  rinkeby:
+    verify: True
+  mainnet-fork:
+    verify: False
+  development:
+    verify: False
+wallets:
+  DEV00: ${PRIVATE_KEY_0}
+  DEV01: ${PRIVATE_KEY_1}
+  DEV02: ${PRIVATE_KEY_2}
+  DEV03: ${PRIVATE_KEY_3}
+contract_address:
+  nft: '0xB4Baf76fE6d823d42fEaC8882C8DC6E0144e03d6'
+  cryptodev_token: "0xCd573137c8d9a1AFd182e1F060C4A4AA32B18605"
